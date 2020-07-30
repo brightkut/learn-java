@@ -1,5 +1,8 @@
 package lambda;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         // The pros of lambda
@@ -52,6 +55,15 @@ public class Main {
         //use method ref (without static method)
         Calculator c6 = numeric::minus;
         System.out.println(c6.add(2, 3));
+
+        //Stream
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < 1000; i++) {
+            list.add(i);
+        }
+        list.stream().forEach(System.out::println);
+        list.parallelStream().forEach(System.out::println);
+
     }
 
     public static double compute(Calculator c, double x, double y) {
