@@ -1,4 +1,4 @@
-package com.learn.springbootmockito;
+package com.learn.springbootmockito.service;
 
 public class PaymentService {
     private int allPayment = 0;

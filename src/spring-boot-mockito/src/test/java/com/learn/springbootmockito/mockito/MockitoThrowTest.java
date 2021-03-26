@@ -1,6 +1,6 @@
 package com.learn.springbootmockito.mockito;
 
-import com.learn.springbootmockito.MyDictionary;
+import com.learn.springbootmockito.model.MyDictionary;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;

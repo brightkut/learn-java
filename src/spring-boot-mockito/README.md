@@ -70,13 +70,26 @@ public void init(){
   โดยกรณีที่มี field ใดใช้ argument matcher แล้วไม่สามารถ set อีก field ด้วย raw value
   ได้ `//Incorrect when(a.method(1,anyInt())).thenReturn()`
 
+
 - การจะเลือกใช้ argument matcher หรือ argument captor ขึ้นอยู่กับว่าเราต้องการตรวจสอบ argument ของ method รึเปล่า
+
 
 - ใน `Mockito version 2` ในกรณีที่ใช้ optional หรือ stream แล้วกำหนดให้ return empty เราสามารถ ignore line นั้นในการ
   stub ได้
   `when(jobService.findCurrentJobPosition(any(Person.class))).thenReturn(Optional.empty());`
+
+
+- การเขียน integration test ใน Spring Boot นั้นจะใช้ `@RunWith(SpringRunner.class)` โดยจะใช้ `@MockBean`
+  กับ `@Autowired` ในการ test โดยตัว `@MockBean` จะทำการตรวจสอบว่า ใน Application Context นั้นมี instance
+  อยู่แล้วหรือไม่หากไม่จะทำการสร้างและเก็บใส่ context
+
+
+- การเขียน integration test ในส่วนของ Rest template สามารถใช้ `MockRestServiceServer`  ในการช่วย mock server ได้คือ
+  สามารถสร้าง server ที่จะ return object เมื่อมีการส่ง request ผ่าน rest template ได้ ซึ่งช่วยให้เราเขียน test ในส่วนของ
+  rest template ได้ง่ายขึึ้น
           
 
 
 
 
+ 

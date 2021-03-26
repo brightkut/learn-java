@@ -1,6 +1,6 @@
 package com.learn.springbootmockito.mockito;
 
-import com.learn.springbootmockito.MyList;
+import com.learn.springbootmockito.model.MyList;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InOrder;

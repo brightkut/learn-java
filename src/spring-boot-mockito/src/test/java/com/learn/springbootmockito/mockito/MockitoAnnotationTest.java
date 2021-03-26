@@ -1,7 +1,7 @@
 package com.learn.springbootmockito.mockito;
 
-import com.learn.springbootmockito.AccountService;
-import com.learn.springbootmockito.PaymentService;
+import com.learn.springbootmockito.service.AccountService;
+import com.learn.springbootmockito.service.PaymentService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.*;

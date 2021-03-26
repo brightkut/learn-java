@@ -1,4 +1,4 @@
-package com.learn.springbootmockito;
+package com.learn.springbootmockito.model;
 
 import java.util.AbstractList;
 
